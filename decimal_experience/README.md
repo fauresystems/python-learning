@@ -43,7 +43,6 @@ np.float64 / FLOAT 1.8912895338116917
 ```
 
 ## Decimal precision
-The Decimal has a default precision of 28 places, while the float has 18 places.
 ```shell
 -- Precision
 <class 'float'>
@@ -62,3 +61,6 @@ with x = Decimal('0.1') + Decimal('0.1') + Decimal('0.1'):
   float(x) == 0.3 is True
   x = 0.3
 ```
+The Decimal has a default precision of 28 places, while the float has 18 places.
+
+Read more at https://zetcode.com/python/decimal/
