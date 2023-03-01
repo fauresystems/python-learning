@@ -15,9 +15,9 @@ def run(val, the_class):
         d - test
         d * test
         d / test
-        d ** 2
+        #d ** 2
         #str(d)
-        abs(d)
+        #abs(d)
 
 
 if __name__ == '__main__':
@@ -28,18 +28,17 @@ if __name__ == '__main__':
     print('DECIMAL', b.timeit(1))
     print('DECIMAL / FLOAT', b.timeit(1) / a.timeit(1))
     c = Timer("run('123.345', np.float64)", "from decimal_speed import run; import numpy as np")
-    print('np.float64', b.timeit(1))
+    print('np.float64', c.timeit(1))
     print('np.float64 / FLOAT', c.timeit(1) / a.timeit(1))
-
 ```
 Output:
 ```shell
-Python 3.8.5 running on Windows 10 (AMD64)
-FLOAT 0.002470800000000002
-DECIMAL 0.010187999999999996
-DECIMAL / FLOAT 4.114297188755033
-np.float64 0.010377499999999998
-np.float64 / FLOAT 1.8912895338116917
+Python 3.11.2 running on Windows 10 (AMD64)
+FLOAT 0.0011348999105393887
+DECIMAL 0.01200079987756908
+DECIMAL / FLOAT 10.433576719632967
+np.float64 0.005813600029796362
+np.float64 / FLOAT 3.957776579333916
 ```
 
 ## Decimal precision

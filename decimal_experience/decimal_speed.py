@@ -10,9 +10,9 @@ def run(val, the_class):
         d - test
         d * test
         d / test
-        d ** 2
+        #d ** 2
         #str(d)
-        abs(d)
+        #abs(d)
 
 
 if __name__ == '__main__':
@@ -23,5 +23,5 @@ if __name__ == '__main__':
     print('DECIMAL', b.timeit(1))
     print('DECIMAL / FLOAT', b.timeit(1) / a.timeit(1))
     c = Timer("run('123.345', np.float64)", "from decimal_speed import run; import numpy as np")
-    print('np.float64', b.timeit(1))
+    print('np.float64', c.timeit(1))
     print('np.float64 / FLOAT', c.timeit(1) / a.timeit(1))
